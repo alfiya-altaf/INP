@@ -1,0 +1,44 @@
+#ball {
+    width: 50px;
+    height: 100px;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #cbebeb,
+      #b12b2b
+    );
+    /*"Call" the animation "function" */
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    /* Normal, reverse, alternate(between the fwd and back) 
+    and alternate-reverse */
+    animation-direction: reverse; 
+    /* Ease is deafault, use cubic-bezier(n,n,n,n) for custom */
+    animation-timing-function: linear; 
+    
+    /* if you want something to display from hidden
+       set the opacity to 0 and in the keyframe steps bring
+   	   the opacity to 1 gradually to stop it flashing */
+  }
+	
+  /* The animation "bounce" */
+  @keyframes bounce{
+    /* start */
+    0% {
+      top: 0px;
+    }
+    /* step (you can add multiple incremental steps from 1-100) */
+    50% {
+      top: 249px;
+      width: 130px;
+      height: 90px;
+    }
+    /* end (you can count down from 100 to 0 too) */
+    100% {
+      top: 0px;
+    }
+}
